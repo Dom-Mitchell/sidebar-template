@@ -20,4 +20,10 @@ function toggleTheme() {
   localStorage.setItem('theme', next)
 }
 
+// const test = document.getElementById('themeButton')
+// if (test) {
+//   test.onclick = toggleTheme
+// }
+
+// Need to make this work still
 document.getElementById('themeButton').onclick = toggleTheme
