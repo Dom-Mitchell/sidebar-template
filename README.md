@@ -1,16 +1,16 @@
-# html-css-ts-project-template
+# sidebar-template
 
 ## Assignment
 
-The goal of this assignment was to create a basic webpage to act as a template for all future html projects.
+The goal of this assignment was to create a basic animated sidebar to act as a template for future html projects.
 
 ![image of My webpage](././images/mypage.png)
 
-The above is a screen capture of the template that I created.
+The above is a screen capture of the sidebar that I created.
 
-![image of My webpage](././icons/current/dai5.svg)
+![image of My webpage](././images/sidebar.png)
 
-The above is a custom favicon that I made for the template, to be used in all future html projects.
+The above is a screen capture of the sidebar that I created expanded to be used in future html projects.
 
 <br/>
 
