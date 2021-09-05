@@ -4,7 +4,7 @@
 
 The goal of this assignment was to create a basic animated sidebar to act as a template for future html projects.
 
-![image of My ](././images/mypage.png)
+![image of My webpage](././images/mypage.png)
 
 The above is a screen capture of the sidebar that I created.
 
