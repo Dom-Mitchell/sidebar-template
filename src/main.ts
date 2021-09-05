@@ -26,4 +26,4 @@ function toggleTheme() {
 // }
 
 // Need to make this work still
-document.getElementById('themeButton').onclick = toggleTheme
+document.getElementById('themeButton')!.onclick = toggleTheme
