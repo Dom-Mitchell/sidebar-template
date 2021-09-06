@@ -1,38 +1,39 @@
 import './style.css'
 
-// Need to change into
-// const themeMap: any = {
-//   dark: 'light',
-//   light: 'solar',
-//   solar: 'dark',
-// }
-
-const themeMap: { [key: string]: string } = {
+// Need to change into something...
+const themeMap: any = {
   dark: 'light',
   light: 'solar',
   solar: 'dark',
 }
 
-const theme = localStorage.getItem('theme')
-const bodyClass = document.body.classList
-if (theme != null) {
-  bodyClass.add(theme)
-}
+// Juan Carlos Espinoza's Solution
+// const themeMap: { [key: string]: string } = {
+//   dark: 'light',
+//   light: 'solar',
+//   solar: 'dark',
+// }
 
-function toggleTheme() {
-  const current = localStorage.getItem('theme')
-  if (current != null) {
-    const next = themeMap[current]
+// const theme = localStorage.getItem('theme')
+// const bodyClass = document.body.classList
+// if (theme != null) {
+//   bodyClass.add(theme)
+// }
 
-    bodyClass.replace(current, next)
-    localStorage.setItem('theme', next)
-  }
-}
+// function toggleTheme() {
+//   const current = localStorage.getItem('theme')
+//   if (current != null) {
+//     const next = themeMap[current]
 
-const themButtonElement = document.getElementById('themeButton')
-if (themButtonElement != null) {
-  themButtonElement.onclick = toggleTheme
-}
+//     bodyClass.replace(current, next)
+//     localStorage.setItem('theme', next)
+//   }
+// }
+
+// const themButtonElement = document.getElementById('themeButton')
+// if (themButtonElement != null) {
+//   themButtonElement.onclick = toggleTheme
+// }
 
 // Why do neither of these work!!??
 // let tmp
@@ -51,26 +52,26 @@ if (themButtonElement != null) {
 // }
 
 // Works Mostly
-// const theme = localStorage.getItem('theme')
-// const bodyClass = document.body.classList
-// theme && bodyClass.add(theme)
+const theme = localStorage.getItem('theme')
+const bodyClass = document.body.classList
+theme && bodyClass.add(theme)
 
-// if ((localStorage.getItem('theme') as string) == undefined || null) {
-//   localStorage.setItem('theme', themeMap['light'])
+if ((localStorage.getItem('theme') as string) == undefined || null) {
+  localStorage.setItem('theme', themeMap['light'])
 
-//   console.log(localStorage.getItem('theme'))
-// } else {
-//   console.log(localStorage.getItem('theme'))
-// }
+  console.log(localStorage.getItem('theme'))
+} else {
+  console.log(localStorage.getItem('theme'))
+}
 
-// // Change the theme on a button click
-// function toggleTheme() {
-//   const current = localStorage.getItem('theme') as string
-//   const next = themeMap[current]
+// Change the theme on a button click
+function toggleTheme() {
+  const current = localStorage.getItem('theme') as string
+  const next = themeMap[current]
 
-//   bodyClass.replace(current, next)
-//   localStorage.setItem('theme', next)
-// }
+  bodyClass.replace(current, next)
+  localStorage.setItem('theme', next)
+}
 
 // Test Case that failed
 // const test = document.getElementById('themeButton')
