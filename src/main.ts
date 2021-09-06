@@ -7,19 +7,13 @@ const themeMap: any = {
   solar: 'dark',
 }
 
-const theme = localStorage.getItem('theme')
+let tmp
+const theme =
+  localStorage.getItem('theme') ||
+  ((tmp = Object.keys(themeMap)[0]), localStorage.setItem('theme', tmp), tmp)
 const bodyClass = document.body.classList
-theme && bodyClass.add(theme)
+bodyClass.add(theme)
 
-if ((localStorage.getItem('theme') as string) == undefined || null) {
-  localStorage.setItem('theme', themeMap['light'])
-
-  console.log(localStorage.getItem('theme'))
-} else {
-  console.log(localStorage.getItem('theme'))
-}
-
-// Change the theme on a button click
 function toggleTheme() {
   const current = localStorage.getItem('theme') as string
   const next = themeMap[current]
@@ -28,11 +22,33 @@ function toggleTheme() {
   localStorage.setItem('theme', next)
 }
 
+// Works Mostly
+// const theme = localStorage.getItem('theme')
+// const bodyClass = document.body.classList
+// theme && bodyClass.add(theme)
+
+// if ((localStorage.getItem('theme') as string) == undefined || null) {
+//   localStorage.setItem('theme', themeMap['light'])
+
+//   console.log(localStorage.getItem('theme'))
+// } else {
+//   console.log(localStorage.getItem('theme'))
+// }
+
+// // Change the theme on a button click
+// function toggleTheme() {
+//   const current = localStorage.getItem('theme') as string
+//   const next = themeMap[current]
+
+//   bodyClass.replace(current, next)
+//   localStorage.setItem('theme', next)
+// }
+
+// Test Case that failed
 // const test = document.getElementById('themeButton')
 // if (test) {
 //   test.onclick = toggleTheme
 // }
 
-// Need to make this work still
+// Got this to work
 document.getElementById('themeButton')!.onclick = toggleTheme
-// console.log(localStorage.getItem('theme'))
