@@ -7,7 +7,9 @@ const themeMap: any = {
   solar: 'dark',
 }
 
-if (!localStorage.getItem('theme')) {
+const newLocal = localStorage.getItem('theme')
+
+if (newLocal == undefined || newLocal == null) {
   localStorage.setItem('theme', themeMap['light'])
 
   console.log(localStorage.getItem('theme'))
