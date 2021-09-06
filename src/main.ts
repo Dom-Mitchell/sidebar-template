@@ -11,7 +11,7 @@ const theme = localStorage.getItem('theme')
 const bodyClass = document.body.classList
 theme && bodyClass.add(theme)
 
-if (localStorage.getItem('theme') == null) {
+if (localStorage.getItem('theme') == undefined) {
   localStorage.setItem('theme', themeMap['light'])
 
   console.log(localStorage.getItem('theme'))
