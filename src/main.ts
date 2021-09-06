@@ -11,6 +11,12 @@ const theme = localStorage.getItem('theme')
 const bodyClass = document.body.classList
 theme && bodyClass.add(theme)
 
+if (localStorage.getItem('theme') == null) {
+  localStorage.setItem('theme', themeMap['light'])
+
+  console.log(localStorage.setItem('theme', themeMap['light']))
+}
+
 // Change the theme on a button click
 function toggleTheme() {
   const current = localStorage.getItem('theme') as string
