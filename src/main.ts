@@ -10,7 +10,7 @@ const themeMap: any = {
 const newLocal = localStorage.getItem('theme')
 
 if (newLocal == undefined || newLocal == null) {
-  localStorage.setItem('theme', themeMap['light'])
+  localStorage.setItem('theme', themeMap[0])
 
   console.log(localStorage.getItem('theme'))
 } else {
