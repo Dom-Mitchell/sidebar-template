@@ -14,7 +14,9 @@ theme && bodyClass.add(theme)
 if (localStorage.getItem('theme') == null) {
   localStorage.setItem('theme', themeMap['light'])
 
-  console.log(localStorage.setItem('theme', themeMap['light']))
+  console.log(localStorage.getItem('theme'))
+} else {
+  console.log(localStorage.getItem('theme'))
 }
 
 // Change the theme on a button click
@@ -33,3 +35,4 @@ function toggleTheme() {
 
 // Need to make this work still
 document.getElementById('themeButton')!.onclick = toggleTheme
+// console.log(localStorage.getItem('theme'))
