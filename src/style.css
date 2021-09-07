@@ -14,6 +14,8 @@
   --cessna: #5e5e5e;
   --orange-sun: #f15a24;
   --yellow-sun: #fcee21;
+  --cyan-ocean: #00bfe9;
+  --blue-ocean: #00217f;
   /* Custom Webpage Colors */
   --pale-green: #e1eedd;
   --mando-blue: #1857a4;
@@ -74,12 +76,13 @@ h1 {
 /* Sidebar Template */
 .navbar {
   top: 0;
-  width: 5rem;
+  width: 10rem;
   height: 100%;
   position: fixed;
   background-color: var(--bg-primary);
   transition: width 200ms ease;
-  /* overflow: scroll; */
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 /* Custom Scrollbar */
@@ -101,31 +104,39 @@ h1 {
   padding: 0;
   margin: 0;
   display: flex;
+  /* flex-wrap: wrap; */
+  /* align-content: flex-start; */
   flex-direction: column;
-  align-items: center;
+  /* align-items: flex-end; */
   height: 100%;
 }
 
 .nav-item {
-  width: 100%;
+  /* width: 100%; */
+  padding: 1.3rem 0;
 }
 
 .nav-item:last-child {
+  /* align-self: flex-end; */
+  /* height: 100%; */
   margin-top: auto;
 }
 
 .nav-link {
   display: flex;
   align-items: center;
-  height: 5rem;
+  /* height: 5rem; */
   color: var(--text-primary);
   text-decoration: none;
   filter: grayscale(100%) opacity(0.7);
   transition: var(--transition-speed);
 }
 
-.nav-link:hover {
+.nav-item:hover .nav-link {
   filter: grayscale(0%) opacity(1);
+}
+
+.nav-item:hover {
   background: var(--bg-secondary);
   color: var(--text-secondary);
 }
@@ -138,12 +149,25 @@ h1 {
 .nav-link svg {
   width: 2rem;
   min-width: 2rem;
+  /* margin: 0 1.5rem; */
+}
+
+.nav-item svg {
   margin: 0 1.5rem;
+}
+
+.double-arrow svg {
+  margin: 0 0 0 1.5rem;
+}
+
+.navbar:hover .double-arrow svg {
+  margin: 0;
+  /* border: 1px solid red; */
 }
 
 .navbar:hover {
   width: 16rem;
-  align-items: center;
+  /* align-items: center; */
 }
 
 .navbar:hover .link-text {
@@ -161,13 +185,18 @@ h1 {
 .double-arrow {
   font-weight: bold;
   text-transform: uppercase;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
   text-align: center;
   color: var(--text-secondary);
   background: var(--bg-secondary);
   font-size: 1.5rem;
   letter-spacing: 0.3ch;
   width: 100%;
+  padding: 1rem 0;
+}
+
+.double-arrow a {
+  justify-content: space-between;
 }
 
 .double-arrow svg {
@@ -178,6 +207,7 @@ h1 {
 .logo-text {
   display: none;
   transition: var(--transition-speed);
+  /* padding: 1rem 0; */
 }
 
 .navbar:hover .double-arrow svg {
