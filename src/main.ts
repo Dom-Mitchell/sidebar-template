@@ -2,9 +2,9 @@ import './style.css'
 
 // Need to change into something...
 const themeMap: any = {
-  dark: 'light',
-  light: 'solar',
-  solar: 'dark',
+  dark: 'dark',
+  light: 'light',
+  solar: 'solar',
 }
 
 const newLocal = localStorage.getItem('theme')
@@ -12,7 +12,7 @@ const newLocal = localStorage.getItem('theme')
 if (newLocal) {
   console.log(newLocal)
 } else {
-  localStorage.setItem('theme', themeMap['light'])
+  localStorage.setItem('theme', themeMap['dark'])
 
   console.log(localStorage.getItem('theme'))
 }
