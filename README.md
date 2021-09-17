@@ -14,6 +14,8 @@ The above is a screen capture of the sidebar that I created expanded to be used 
 
 <br/>
 
-A link to the webpage that I made can be found in the About section of this repository or below.
+A link to the webpage that I made can be found in the **About** section of this repository or below.
 
+```html
 https://sidebar-template-dommitchell.netlify.app/
+```
